@@ -260,19 +260,38 @@ tr:hover {
   line-height: 1.5;
 }
 
-.project-media {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+/* === Swiper Styles for Project Media === */
+.project-swiper {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.project-media img,
-.project-media video,
-.project-media iframe {
+.project-swiper img,
+.project-swiper video {
   width: 100%;
+  height: auto;
   border-radius: 10px;
-  max-height: 300px;
-  object-fit: cover;
+  display: block;
+}
+
+/* Swiper navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #004080;
+  font-weight: bold;
+}
+
+.swiper-pagination-bullet {
+  background: #004080;
+  opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ffd700;
+  opacity: 1;
 }
 
 /* === Media Queries for Mobile Responsiveness === */
@@ -341,5 +360,10 @@ tr:hover {
 
   .project-card p {
     font-size: 0.95rem;
+  }
+
+  /* Swiper mobile fix */
+  .project-swiper {
+    max-width: 100%;
   }
 }
