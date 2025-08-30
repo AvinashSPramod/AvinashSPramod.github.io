@@ -1,3 +1,9 @@
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Profile Picture */
 .profile-pic {
   width: 150px;
   height: 180px;
