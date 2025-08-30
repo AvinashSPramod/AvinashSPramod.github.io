@@ -8,12 +8,9 @@
 
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-  <!-- AOS (Animate On Scroll) CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <header data-aos="fade-down">
+  <header class="reveal">
     <div class="header-container">
       <img src="assets/Dr._Avinash_S._Pramod_Image.jpg" alt="Avinash S Pramod" class="profile-pic" />
       <div class="header-text">
@@ -21,7 +18,7 @@
         <p>Robotics Researcher: Wearable Robotics | Human–Robot Interaction | Soft Robotics</p>
         
         <!-- Professional Profile Icons -->
-        <div class="social-icons" data-aos="zoom-in">
+        <div class="social-icons reveal">
           <a href="https://scholar.google.com/citations?user=W1I1mkEAAAAJ&hl=en" target="_blank" title="Google Scholar">
             <i class="fa-brands fa-google"></i>
           </a>
@@ -48,7 +45,7 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="about" data-aos="fade-up">
+  <section id="about" class="reveal">
     <h2>About Me</h2>
     <p>Welcome! I am Avinash S Pramod, and I did my MS and PhD in Robotics from the Department of Engineering Design, 
       IIT Madras (Indian Institute of Technology Madras), and my B.Tech in Mechanical Engineering from Vimal Jyothi Engineering College. 
@@ -56,9 +53,9 @@
       I specialize in the design, modeling, prototyping, and experimental validation of intelligent robotic systems, with key contributions to human-centric robotics.</p>
   </section>
 
-  <section id="education" data-aos="fade-right">
+  <section id="education" class="reveal">
     <h2>Education</h2>
-    <table class="education-table">
+    <table class="education-table reveal">
       <thead>
         <tr>
           <th>Education</th>
@@ -85,9 +82,9 @@
   </section>  
 
   <!-- Work Experience Section -->
-  <section id="experience" data-aos="fade-left">
+  <section id="experience" class="reveal">
     <h2>Work Experience</h2>
-    <table class="education-table">
+    <table class="education-table reveal">
       <thead>
         <tr>
           <th>Role</th>
@@ -113,32 +110,40 @@
     </table>
   </section>
 
-  <section id="projects" data-aos="zoom-in">
+  <section id="projects" class="reveal">
     <h2>Projects</h2>
-    <ul>
+    <ul class="reveal">
       <li>13-DOF Serial Manipulator</li>
       <li>Wearable Exoskeleton</li>
       <li>Farming Robot</li>
     </ul>
   </section>
 
-  <section id="publications" data-aos="fade-up">
+  <section id="publications" class="reveal">
     <h2>Publications</h2>
     <p>List your publications here.</p>
   </section>
 
-  <section id="contact" data-aos="fade-up">
+  <section id="contact" class="reveal">
     <h2>Contact</h2>
     <p>Email: avinashspramod@gmail.com</p>
   </section>
 
-  <!-- AOS JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <!-- JS for Reveal Animation -->
   <script>
-    AOS.init({
-      duration: 1000,  // 1s animation
-      once: true       // animate only once
-    });
+    const reveals = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        } else {
+          entry.target.classList.remove("visible"); // re-trigger on scroll back
+        }
+      });
+    }, { threshold: 0.15 });
+
+    reveals.forEach(r => observer.observe(r));
   </script>
 
   <script src="script.js"></script>
