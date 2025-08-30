@@ -8,6 +8,24 @@
 
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    html {
+      scroll-behavior: smooth; /* keeps smooth scrolling */
+    }
+  </style>
+
+  <script>
+    // Prevent browser from restoring previous scroll position
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+
+    // Always start at the top on reload
+    window.onbeforeunload = function () {
+      window.scrollTo(0, 0);
+    };
+  </script>
 </head>
 <body>
   <header class="reveal">
