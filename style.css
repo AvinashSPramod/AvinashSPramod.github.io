@@ -35,6 +35,7 @@ header {
   display: flex;
   align-items: center;
   gap: 25px;
+  flex-wrap: wrap; /* Allow header elements to stack on smaller screens */
 }
 
 .header-text h1 {
@@ -221,3 +222,61 @@ tr:hover {
 .reveal.visible > *:nth-child(3) { transition-delay: 0.3s; }
 .reveal.visible > *:nth-child(4) { transition-delay: 0.4s; }
 .reveal.visible > *:nth-child(5) { transition-delay: 0.5s; }
+
+/* === Media Queries for Mobile Responsiveness === */
+
+/* For devices with a max width of 768px (e.g., tablets and phones) */
+@media screen and (max-width: 768px) {
+  .header-container {
+    flex-direction: column; /* Stack header elements */
+    text-align: center;
+  }
+
+  .profile-pic {
+    width: 120px; /* Smaller profile picture */
+    height: 120px;
+  }
+
+  .header-text h1 {
+    font-size: 28px; /* Adjust heading size */
+  }
+
+  .header-text p {
+    font-size: 16px; /* Adjust paragraph font size */
+    max-width: 90%; /* Adjust paragraph width */
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column; /* Stack nav items */
+    text-align: center;
+  }
+
+  nav a {
+    margin: 10px 0; /* Space out navigation links */
+    padding: 10px 20px;
+  }
+
+  section {
+    padding: 40px 20px; /* Reduce padding */
+  }
+
+  section h2 {
+    font-size: 26px; /* Smaller headings for mobile */
+  }
+
+  table th, table td {
+    padding: 10px 12px; /* Adjust table padding */
+    font-size: 14px; /* Adjust table font size */
+  }
+
+  .social-icons a {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  #contact {
+    padding: 30px 20px; /* Adjust padding in contact section */
+  }
+}
