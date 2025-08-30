@@ -76,28 +76,37 @@ nav a:hover {
   box-shadow: 0 0 12px rgba(255, 215, 0, 0.7);
 }
 
+/* Active nav highlight */
+nav a.active {
+  background: #ffd700;
+  color: #003366;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.8);
+  font-weight: 600;
+}
+
 /* Sections */
 section {
-  padding: 60px 40px;
+  padding: 70px 40px;
   max-width: 1100px;
   margin: auto;
 }
 
 section h2 {
-  font-size: 28px;
+  font-size: 30px;
   margin-bottom: 20px;
   color: #004080;
   text-align: center;
   position: relative;
+  letter-spacing: 0.5px;
 }
 
 section h2::after {
   content: "";
   display: block;
-  width: 60px;
+  width: 70px;
   height: 3px;
   background: #004080;
-  margin: 10px auto 0;
+  margin: 12px auto 0;
   border-radius: 2px;
 }
 
@@ -171,7 +180,7 @@ tr:hover {
   background: #003366;
   color: #fff;
   text-align: center;
-  padding: 40px 20px;
+  padding: 50px 20px;
   border-radius: 8px;
 }
 
@@ -187,7 +196,7 @@ tr:hover {
 .reveal {
   opacity: 0;
   transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transition: opacity 0.9s ease, transform 0.9s ease;
 }
 
 .reveal.visible {
@@ -195,7 +204,7 @@ tr:hover {
   transform: translateY(0);
 }
 
-/* Staggered animations for children (tables, lists, etc.) */
+/* Consistent staggered animations for children */
 .reveal > * {
   opacity: 0;
   transform: translateY(20px);
