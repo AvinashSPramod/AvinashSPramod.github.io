@@ -5,11 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Avinash S Pramod - Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- AOS (Animate On Scroll) CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <header>
+  <header data-aos="fade-down">
     <div class="header-container">
       <img src="assets/Dr._Avinash_S._Pramod_Image.jpg" alt="Avinash S Pramod" class="profile-pic" />
       <div class="header-text">
@@ -17,7 +21,7 @@
         <p>Robotics Researcher: Wearable Robotics | Human–Robot Interaction | Soft Robotics</p>
         
         <!-- Professional Profile Icons -->
-        <div class="social-icons">
+        <div class="social-icons" data-aos="zoom-in">
           <a href="https://scholar.google.com/citations?user=W1I1mkEAAAAJ&hl=en" target="_blank" title="Google Scholar">
             <i class="fa-brands fa-google"></i>
           </a>
@@ -44,7 +48,7 @@
     <a href="#contact">Contact</a>
   </nav>
 
-  <section id="about">
+  <section id="about" data-aos="fade-up">
     <h2>About Me</h2>
     <p>Welcome! I am Avinash S Pramod, and I did my MS and PhD in Robotics from the Department of Engineering Design, 
       IIT Madras (Indian Institute of Technology Madras), and my B.Tech in Mechanical Engineering from Vimal Jyothi Engineering College. 
@@ -52,7 +56,7 @@
       I specialize in the design, modeling, prototyping, and experimental validation of intelligent robotic systems, with key contributions to human-centric robotics.</p>
   </section>
 
-  <section id="education">
+  <section id="education" data-aos="fade-right">
     <h2>Education</h2>
     <table class="education-table">
       <thead>
@@ -81,7 +85,7 @@
   </section>  
 
   <!-- Work Experience Section -->
-  <section id="experience">
+  <section id="experience" data-aos="fade-left">
     <h2>Work Experience</h2>
     <table class="education-table">
       <thead>
@@ -109,7 +113,7 @@
     </table>
   </section>
 
-  <section id="projects">
+  <section id="projects" data-aos="zoom-in">
     <h2>Projects</h2>
     <ul>
       <li>13-DOF Serial Manipulator</li>
@@ -118,15 +122,24 @@
     </ul>
   </section>
 
-  <section id="publications">
+  <section id="publications" data-aos="fade-up">
     <h2>Publications</h2>
     <p>List your publications here.</p>
   </section>
 
-  <section id="contact">
+  <section id="contact" data-aos="fade-up">
     <h2>Contact</h2>
     <p>Email: avinashspramod@gmail.com</p>
   </section>
+
+  <!-- AOS JS -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,  // 1s animation
+      once: true       // animate only once
+    });
+  </script>
 
   <script src="script.js"></script>
 </body>
