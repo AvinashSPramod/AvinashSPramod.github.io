@@ -69,6 +69,11 @@ section {
   margin: auto;
 }
 
+/* Make paragraphs justified */
+section p {
+  text-align: justify;
+}
+
 /* Education Table */
 #education table {
   width: 100%;
