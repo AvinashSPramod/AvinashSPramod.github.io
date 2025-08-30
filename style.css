@@ -3,101 +3,128 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Body */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
 /* Profile Picture */
 .profile-pic {
   width: 150px;
   height: 180px;
   border-radius: 50%;
   border: 4px solid #004080;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
   object-fit: cover;
-}
-
-/* Body */
-body {
-  font-family: "Segoe UI", Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  background-color: #f9f9f9;
-  color: #333;
 }
 
 /* Header */
 header {
   background: linear-gradient(135deg, #004080, #0066cc);
   color: #fff;
-  padding: 30px 40px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 40px 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
 }
 
-/* Flexbox for header content */
 .header-container {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 25px;
 }
 
 .header-text h1 {
   margin: 0;
-  font-size: 32px;
+  font-size: 36px;
+  font-weight: 700;
 }
 
 .header-text p {
-  margin: 5px 0 0;
+  margin: 8px 0 0;
   font-size: 18px;
-  max-width: 700px;
+  max-width: 750px;
 }
 
 /* Navigation */
 nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background: #003366;
-  padding: 12px;
+  padding: 14px;
   text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 nav a {
   color: #fff;
-  margin: 0 15px;
+  margin: 0 18px;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  padding: 6px 12px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
 }
 
 nav a:hover {
-  color: #ffd700;
+  background: #ffd700;
+  color: #003366;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.7);
 }
 
 /* Sections */
 section {
-  padding: 40px;
-  max-width: 1100px;  /* widened for less empty space */
+  padding: 60px 40px;
+  max-width: 1100px;
   margin: auto;
 }
 
-/* Make paragraphs justified */
-section p {
-  text-align: justify;
+section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #004080;
+  text-align: center;
+  position: relative;
 }
 
-/* Education Table */
-#education table {
+section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #004080;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+section p {
+  text-align: justify;
+  font-size: 16px;
+  color: #444;
+}
+
+/* Tables (Education + Experience unified style) */
+table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1.5rem;
   background-color: #fff;
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-#education th, #education td {
-  border: 1px solid #ddd;
+th, td {
+  border: 1px solid #e0e0e0;
   padding: 12px 15px;
   text-align: left;
 }
 
-#education th {
+th {
   background-color: #004080;
   color: #fff;
   font-weight: bold;
@@ -105,50 +132,18 @@ section p {
   letter-spacing: 0.05em;
 }
 
-#education tr:nth-child(even) {
+tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
-#education tr:hover {
-  background-color: #f1f1f1;
-}
-
-/* Work Experience Table */
-#experience table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1.5rem;
-  background-color: #fff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-#experience th, #experience td {
-  border: 1px solid #ddd;
-  padding: 12px 15px;
-  text-align: left;
-}
-
-#experience th {
-  background-color: #0066cc; /* different shade to distinguish */
-  color: #fff;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-#experience tr:nth-child(even) {
-  background-color: #f4f8ff; /* light blue */
-}
-
-#experience tr:hover {
-  background-color: #e8f2ff; /* hover highlight */
+tr:hover {
+  background-color: #f1f7ff;
+  transition: background 0.3s ease;
 }
 
 /* === Social Media Icons === */
 .social-icons {
-  margin-top: 15px;
+  margin-top: 18px;
 }
 
 .social-icons a {
@@ -158,7 +153,7 @@ section p {
   line-height: 45px;
   margin: 0 8px;
   border-radius: 50%;
-  background: #0073e6; /* default blue */
+  background: #0073e6;
   color: #fff;
   text-align: center;
   font-size: 20px;
@@ -167,6 +162,23 @@ section p {
 
 .social-icons a:hover {
   background: #005bb5;
-  box-shadow: 0 0 15px rgba(0, 115, 230, 0.8);
-  transform: translateY(-3px);
+  box-shadow: 0 0 18px rgba(0, 115, 230, 0.8);
+  transform: translateY(-4px);
+}
+
+/* Footer Contact Section (Optional for consistency) */
+#contact {
+  background: #003366;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 8px;
+}
+
+#contact h2 {
+  color: #ffd700;
+}
+
+#contact p {
+  font-size: 18px;
 }
