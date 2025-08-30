@@ -223,9 +223,59 @@ tr:hover {
 .reveal.visible > *:nth-child(4) { transition-delay: 0.4s; }
 .reveal.visible > *:nth-child(5) { transition-delay: 0.5s; }
 
-/* === Media Queries for Mobile Responsiveness === */
+/* === Projects Section === */
+#projects {
+  background: #f9f9f9;
+}
 
-/* For devices with a max width of 768px (e.g., tablets and phones) */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.project-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+}
+
+.project-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #004080;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.project-media {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-media img,
+.project-media video,
+.project-media iframe {
+  width: 100%;
+  border-radius: 10px;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+/* === Media Queries for Mobile Responsiveness === */
 @media screen and (max-width: 768px) {
   .header-container {
     flex-direction: column; /* Stack header elements */
@@ -278,5 +328,18 @@ tr:hover {
 
   #contact {
     padding: 30px 20px; /* Adjust padding in contact section */
+  }
+
+  /* Project section mobile tweaks */
+  .project-card {
+    padding: 15px;
+  }
+
+  .project-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-card p {
+    font-size: 0.95rem;
   }
 }
