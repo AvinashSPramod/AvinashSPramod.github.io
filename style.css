@@ -191,6 +191,7 @@ tr:hover {
 
 #contact p {
   font-size: 18px;
+  color: #ffffff;
 }
 
 /* === Scroll Reveal Animations === */
@@ -304,7 +305,7 @@ tr:hover {
 
 #publications h2,
 #publications h3 {
-  text-align: justify;
+  text-align: center;
 }
 
 #publications .pub-list {
