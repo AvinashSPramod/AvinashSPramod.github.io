@@ -319,6 +319,16 @@ tr:hover {
   text-align: justify; /* ✅ Forces justified text */
 }
 
+/* === Footer === */
+footer {
+  text-align: center;
+  padding: 15px 0;
+  background-color: #f8f9fa;
+  color: #555;
+  border-top: 1px solid #ddd;
+  width: 100%;
+}
+
 /* === Media Queries for Mobile Responsiveness === */
 @media screen and (max-width: 768px) {
   .header-container {
@@ -391,13 +401,4 @@ tr:hover {
   .project-swiper {
     max-width: 100%;
   }
-
-footer {
-  text-align: center;          /* centers the text */
-  padding: 15px 0;             /* adds spacing */
-  background-color: #f8f9fa;   /* light professional background */
-  color: #555;                 /* softer text color */
-  border-top: 1px solid #ddd;  /* thin separator line */
-  width: 100%;                 /* full width */
-}
 }
