@@ -392,7 +392,12 @@ tr:hover {
     max-width: 100%;
   }
 
-  footer p {
-  text-align: center;   /* centers the text */
-  }
+footer {
+  text-align: center;          /* centers the text */
+  padding: 15px 0;             /* adds spacing */
+  background-color: #f8f9fa;   /* light professional background */
+  color: #555;                 /* softer text color */
+  border-top: 1px solid #ddd;  /* thin separator line */
+  width: 100%;                 /* full width */
+}
 }
