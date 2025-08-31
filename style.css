@@ -258,6 +258,7 @@ tr:hover {
   color: #444;
   margin-bottom: 15px;
   line-height: 1.5;
+  text-align: justify; /* ✅ Project descriptions justified */
 }
 
 /* === Swiper Styles for Project Media === */
@@ -292,6 +293,29 @@ tr:hover {
 .swiper-pagination-bullet-active {
   background: #ffd700;
   opacity: 1;
+}
+
+/* === Publications Section === */
+#publications {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+#publications h2,
+#publications h3 {
+  text-align: justify;
+}
+
+#publications .pub-list {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
+#publications .pub-list li {
+  margin-bottom: 12px;
+  text-align: justify; /* ✅ Forces justified text */
 }
 
 /* === Media Queries for Mobile Responsiveness === */
