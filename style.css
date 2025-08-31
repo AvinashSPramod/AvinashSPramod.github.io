@@ -392,9 +392,7 @@ tr:hover {
     max-width: 100%;
   }
 
-  footer {
+  footer p {
   text-align: center;   /* centers the text */
-  width: 100%;          /* makes footer span full width */
-  position: relative;   /* normal positioning */
   }
 }
