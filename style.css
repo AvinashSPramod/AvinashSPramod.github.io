@@ -132,12 +132,12 @@ table {
 /* Specific Column Widths for Experience Table */
 table th:nth-child(1),
 table td:nth-child(1) {
-  width: 22%; /* Increased width for Role column */
+  width: 20%; /* Increased width for Role column */
 }
 
 table th:nth-child(2),
 table td:nth-child(2) {
-  width: 28%; /* Organization column */
+  width: 30%; /* Organization column */
 }
 
 table th:nth-child(3),
