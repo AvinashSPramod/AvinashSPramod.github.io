@@ -117,7 +117,7 @@ section p {
   color: #444;
 }
 
-/* Tables (Education + Experience unified style) */
+/* Base Tables (Unified style for all tables) */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -126,35 +126,13 @@ table {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  table-layout: fixed; /* Ensures column widths strictly adhere to percentages */
-}
-
-/* Specific Column Widths for Experience Table */
-table th:nth-child(1),
-table td:nth-child(1) {
-  width: 18%; /* Increased width for Role column */
-}
-
-table th:nth-child(2),
-table td:nth-child(2) {
-  width: 32%; /* Organization column */
-}
-
-table th:nth-child(3),
-table td:nth-child(3) {
-  width: 14%; /* Year column */
-}
-
-table th:nth-child(4),
-table td:nth-child(4) {
-  width: 36%; /* Reduced width for Details column */
 }
 
 th, td {
   border: 1px solid #e0e0e0;
   padding: 12px 15px;
   text-align: left;
-  word-wrap: break-word; /* Prevents overflow inside narrower columns */
+  word-wrap: break-word;
 }
 
 th {
@@ -172,6 +150,40 @@ tr:nth-child(even) {
 tr:hover {
   background-color: #f1f7ff;
   transition: background 0.3s ease;
+}
+
+/* === Specific Column Widths ONLY for Professional Experience Section === */
+#experience table,
+table.experience-table {
+  table-layout: fixed;
+}
+
+#experience table th:nth-child(1),
+#experience table td:nth-child(1),
+table.experience-table th:nth-child(1),
+table.experience-table td:nth-child(1) {
+  width: 18%;
+}
+
+#experience table th:nth-child(2),
+#experience table td:nth-child(2),
+table.experience-table th:nth-child(2),
+table.experience-table td:nth-child(2) {
+  width: 32%;
+}
+
+#experience table th:nth-child(3),
+#experience table td:nth-child(3),
+table.experience-table th:nth-child(3),
+table.experience-table td:nth-child(3) {
+  width: 14%;
+}
+
+#experience table th:nth-child(4),
+#experience table td:nth-child(4),
+table.experience-table th:nth-child(4),
+table.experience-table td:nth-child(4) {
+  width: 36%;
 }
 
 /* === Social Media Icons === */
