@@ -126,12 +126,35 @@ table {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  table-layout: fixed; /* Ensures column widths strictly adhere to percentages */
+}
+
+/* Specific Column Widths for Experience Table */
+table th:nth-child(1),
+table td:nth-child(1) {
+  width: 22%; /* Increased width for Role column */
+}
+
+table th:nth-child(2),
+table td:nth-child(2) {
+  width: 28%; /* Organization column */
+}
+
+table th:nth-child(3),
+table td:nth-child(3) {
+  width: 15%; /* Year column */
+}
+
+table th:nth-child(4),
+table td:nth-child(4) {
+  width: 35%; /* Reduced width for Details column */
 }
 
 th, td {
   border: 1px solid #e0e0e0;
   padding: 12px 15px;
   text-align: left;
+  word-wrap: break-word; /* Prevents overflow inside narrower columns */
 }
 
 th {
